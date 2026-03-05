@@ -16,10 +16,7 @@ def index(title):
 
 @app.route('/training/<prof>')
 def training(prof):
-    if 'инженер' in prof or 'строитель' in prof:
-        return render_template('prof_engineer.html', prof=prof)
-    else:
-        return render_template('prof_scientist.html', prof=prof)
+        return render_template('training.html', prof=prof)
 
 
 @app.route('/list_prof/<list_type>')
