@@ -21,10 +21,7 @@ def training(prof):
 
 @app.route('/list_prof/<list_type>')
 def list_prof(list_type):
-    if list_type == 'ol':
-        return render_template('ol.html')
-    elif list_type == 'ul':
-        return render_template('ul.html')
+    return render_template('list_prof.html', list_type=list_type)
 
 
 
