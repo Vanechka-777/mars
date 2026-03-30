@@ -23,5 +23,5 @@ class Jobs(SqlAlchemyBase, UserMixin, SerializerMixin):
     end_date = sqlalchemy.Column(sqlalchemy.DateTime, nullable=True)
     is_finished = sqlalchemy.Column(sqlalchemy.Boolean, default=False)
     #category = sqlalchemy.Column(sqlalchemy.Integer, sqlalchemy.ForeignKey("users.id"))
-    user = orm.relation('User')
+    user = orm.relationship('User')
     #categories = orm.relation("Category", secondary='association', backref='jobs')
