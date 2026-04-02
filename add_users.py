@@ -3,45 +3,41 @@ from data import db_session
 
 db_session.global_init("db/mars.db")
 
-captain = User()
-captain.surname = "Scott"
-captain.name = "Ridley"
-captain.age = 21
-captain.position = "captain"
-captain.speciality = "research engineer"
-captain.address = "module_1"
-captain.email = "scott_chief@mars.org"
-captain.password = "captain123"
+user = User()
+user.name = "Ivan"
+user.surname = "Chugunov"
+user.email = "vanya@email.ru"
+user.age = "17"
+user.position = "modul 1"
+user.speciality = "sis. admin"
+user.address = "Vurnary"
+user.password = "fffffff"
+db_sess = db_session.create_session()
+db_sess.add(user)
+db_sess.commit()
 
-colonists = [
-    {
-        'surname': 'Ivanov',
-        'name': 'Petr',
-        'age': 28,
-        'position': 'engineer',
-        'speciality': 'mechanic',
-        'address': 'module_2',
-        'email': 'ivanov@mars.org',
-        'password': 'ivanov123'
-    },
-    {
-        'surname': 'Kuznetsova',
-        'name': 'Elena',
-        'age': 25,
-        'position': 'doctor',
-        'speciality': 'therapist',
-        'address': 'module_3',
-        'email': 'kuznetsova@mars.org',
-        'password': 'kuznetsova123'
-    },
-    {
-        'surname': 'Volkov',
-        'name': 'Alexey',
-        'age': 32,
-        'position': 'scientist',
-        'speciality': 'astrobiologist',
-        'address': 'module_1',
-        'email': 'volkov@mars.org',
-        'password': 'volkov123'
-    }
-]
+user = User()
+user.name = "Maks"
+user.surname = "Charkov"
+user.email = "maks@email.ru"
+user.age = "19"
+user.position = "modul 2"
+user.speciality = "mechanic"
+user.address = "Moskow"
+user.password = "maks123"
+db_sess = db_session.create_session()
+db_sess.add(user)
+db_sess.commit()
+
+user = User()
+user.name = "Petya"
+user.surname = "Stepanov"
+user.email = "petya@email.ru"
+user.age = "21"
+user.position = "modul 3"
+user.speciality = "builder"
+user.address = "St.Petersburg"
+user.password = "petya123"
+db_sess = db_session.create_session()
+db_sess.add(user)
+db_sess.commit()
