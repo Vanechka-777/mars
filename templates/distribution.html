@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="answer">
+    {% for astronaut in astronauts %}
+        <br>{{ astronaut }} - Каюта №{{ loop.index }}{% if loop.first %} - капитан корабля{% endif %}</br>
+    {% endfor %}
+</div>
+{% endblock %}

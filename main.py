@@ -24,6 +24,7 @@ def training(prof):
 def list_prof(list_type):
     return render_template('list_prof.html', list_type=list_type)
 
+
 @app.route('/answer')
 @app.route('/auto_answer')
 def auto_answer():
@@ -38,6 +39,20 @@ def auto_answer():
         'ready': 'True'
     }
     return render_template('auto_answer.html', **context)
+
+
+@app.route('/distribution')
+def distribution():
+    astronauts = [
+        "Ридли Скотт",
+        "Энди Уир",
+        "Марк Уотни",
+        "Венката Капур",
+        "Тедди Сандерс",
+        "Шон Бин"
+    ]
+    return render_template('distribution.html', astronauts=astronauts)
+
 
 if __name__ == '__main__':
     app.run(port=5000, host='127.0.0.1')
