@@ -1,4 +1,5 @@
 from flask import Flask, render_template, url_for
+from forms import LoginForm
 
 
 app = Flask(__name__)
@@ -39,6 +40,14 @@ def auto_answer():
         'ready': 'True'
     }
     return render_template('auto_answer.html', **context)
+
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    form = LoginForm()
+    if form.validate_on_submit():
+        return redirect('/success')
+    return render_template('login.html', title='Аварийный доступ', form=form)
 
 
 @app.route('/distribution')

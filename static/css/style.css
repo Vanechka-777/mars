@@ -4,3 +4,13 @@
 .answer
 {padding-left: 60px;
 color: rgba(255, 155, 0, 1)}
+.login {
+    font-weight: bold;
+    font-size: 2.5em;
+    padding-left: 120px;
+    background-image: url('/static/img/MARS-2-7.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 90px;
+    line-height: 90px;
+}
