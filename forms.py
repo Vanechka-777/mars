@@ -12,13 +12,13 @@ class LoginForm(FlaskForm):
 
 
 class RegisterForm(FlaskForm):
-    email = EmailField('Почта', validators=[DataRequired()])
-    password = PasswordField('Пароль', validators=[DataRequired()])
-    password_again = PasswordField('Повторите пароль', validators=[DataRequired()])
-    surname = StringField('Фамилия', validators=[DataRequired()])
-    name = StringField('Имя', validators=[DataRequired()])
-    age = IntegerField('Возраст')
-    position = StringField('Должность')
-    speciality = StringField('Специальность')
-    address = StringField('Адрес')
-    submit = SubmitField('Зарегистрироваться')
+    email = EmailField('Login / email', validators=[DataRequired()])
+    password = PasswordField('Password', validators=[DataRequired()])
+    password_again = PasswordField('Repeat password', validators=[DataRequired()])
+    surname = StringField('Surname', validators=[DataRequired()])
+    name = StringField('Name', validators=[DataRequired()])
+    age = IntegerField('Age')
+    position = StringField('Position')
+    speciality = StringField('Speciality')
+    address = StringField('Address')
+    submit = SubmitField('Submit')
