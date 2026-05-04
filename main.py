@@ -64,11 +64,8 @@ def distribution():
     return render_template('distribution.html', astronauts=astronauts)
 
 
-from flask import render_template, redirect, request
-
-
 @app.route('/register', methods=['GET', 'POST'])
-def register():  # Исправлено: было reqister, теперь register
+def register():
     form = RegisterForm()
     if form.validate_on_submit():
         if form.password.data != form.password_again.data:
